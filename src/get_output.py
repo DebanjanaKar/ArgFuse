@@ -67,7 +67,7 @@ for k, v in true.items() :
 
 print("--------generating hypothesis doc------------")
 
-with open('../resources/merged_new_1_args.pkl', 'rb') as pkl_in:
+with open('../resources/merged_new_args.pkl', 'rb') as pkl_in:
     merged = pkl.load(pkl_in)
 
 pred_sents = {}
@@ -97,7 +97,7 @@ with open('../results/ref.txt', 'w') as f:
         ref.append([true_sents[k]])
         f.write('%s\n' %true_sents[k])
 
-with open('../results/hyp2.txt', 'w') as f:
+with open('../results/hyp.txt', 'w') as f:
     for k in keys:
         try:
             f.write('%s\n' %pred_sents[k])
