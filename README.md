@@ -80,12 +80,15 @@ In each iteration the most confusing data points are written into a file `sample
 
 The above two steps are the only training involved in this framework. Here we will mention how we will curate the aggregated document frames.
 
-+ Run `python rank_args_final.py` to filter relevant argument mentions using the trained relevance classifier and rank them per argument type (using `biased_textrank.py`)
++ Run `python rank_args.py` to filter relevant argument mentions using the trained relevance classifier and rank them per argument type (using `biased_textrank.py`)
 + Run `python get_doc_frame.py` to generate aggregated document frames with relevant and non-redundant information.
 
 #### Evaluation
 
-Run `python get_score.py` to get the precision, recall and f1-score values.
+Create an evaluation directory: `mkdir results/`
+
++ Run `python get_output.py` to write the outputs into files.
++ Run `python score.py` on the output files from previous step to print the precision, recall and f1-score values.
 
 ## Citation
 
